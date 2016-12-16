@@ -1,0 +1,79 @@
+use java;
+drop table Stations;
+create table Stations(
+num int auto_increment,
+title varchar(50),
+toilet varchar(10),
+feedingRoom varchar(10),
+L1 varchar(10),
+L2 varchar(10),
+L3 varchar(10),
+L4 varchar(10),
+L5 varchar(10),
+L6 varchar(10),
+L7 varchar(10),
+L8 varchar(10),
+L9 varchar(10),
+primary key(num)
+);
+insert into Stations(num, title, toilet, feedingRoom, L1, L2, L3, L4, L5, L6, L7, L8, L9)
+values(1, '역삼', 'false', 'true', 'false', 'true', 'false', 'false', 'false', 'false', 'false', 'false', 'false');
+
+insert into Stations(title, toilet, feedingRoom, L2)
+values('강남', 'true', 'false', 'true');
+
+insert into Stations(title, toilet, feedingRoom, L1)
+values('구로', 'false', 'false', 'true');
+
+insert into Stations(title, toilet, feedingRoom, L1, L2)
+values('신도림', 'false', 'false', 'true', 'ture');
+
+insert into Stations(title, toilet, feedingRoom, L2, L7)
+values('대림', 'false', 'false', 'true', 'ture');
+
+insert into Stations(title, toilet, feedingRoom, L2, L7)
+values('건대입구', 'false', 'false', 'true', 'ture');
+
+insert into Stations(title, toilet, feedingRoom, L2)
+values('낙성대', 'false', 'false', 'true');
+
+insert into Stations(title, toilet, feedingRoom, L2, L4)
+values('사당', 'false', 'false', 'true', 'ture');
+
+insert into Stations(title, toilet, feedingRoom, L2)
+values('신림', 'false', 'false', 'true');
+
+select * from Stations;
+select num, title, toilet, feedingRoom from Stations where L2 like 'true';
+select L2, num, title, toilet, feedingRoom from Stations where L2 like 'true';
+select L2, num, title, toilet, feedingRoom from Stations order by num desc;
+update Stations set toilet="true" where num=5;
+update Stations set toilet="true" where *;
+update Stations set toilet="true" where num>=1;
+select L2, num, title, toilet, feedingRoom from Stations;
+
+update Stations set feedingRoom="true" where num>=1;
+select L2, num, title, toilet, feedingRoom from Stations;
+
+update Stations set feedingRoom="false" where num%2=0;
+select L2, num, title, toilet, feedingRoom from Stations;
+
+update Stations set toilet="false" where num%3=0;
+select L2, num, title, toilet, feedingRoom from Stations;
+
+update Stations set L2="true" where title = "구로";
+select L2, num, title, toilet, feedingRoom from Stations;
+
+select L1, L2, num, title, toilet, feedingRoom from Stations where L2 like 'true' and L1 like 'true';
+select L1, L2, L7 num, title, toilet, feedingRoom from Stations where L2 like 'true' or L1 like 'true' or L7 like 'ture' ;
+
+use java;
+drop table ES;
+create table ES(
+kind_num int auto_incerement,
+hair int,
+voice int,
+cute int,
+heartFluttering varchar(10),
+primary key(kind_num)
+);

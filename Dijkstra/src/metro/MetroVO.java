@@ -1,0 +1,161 @@
+package metro;
+
+public class MetroVO {
+
+	private String stn;
+	private int stnnum;
+	private int stnline;
+	private int duration;
+	private boolean toilet;
+	private boolean storage;
+	private boolean otherside;
+	private boolean transfer;
+	private int dijknum;
+	private int closetransferstn1;
+	private int closetransferstn2;
+	
+	public MetroVO() {
+       
+	}
+
+
+	public MetroVO(String stn, int stnnum, int stnline, int duration, boolean toilet, boolean storage,
+			boolean otherside, boolean transfer, int dijknum, int closetransferstn1, int closetransferstn2) {
+		super();
+		this.stn = stn;
+		this.stnnum = stnnum;
+		this.stnline = stnline;
+		this.duration = duration;
+		this.toilet = toilet;
+		this.storage = storage;
+		this.otherside = otherside;
+		this.transfer = transfer;
+		this.dijknum = dijknum;
+		this.closetransferstn1 = closetransferstn1;
+		this.closetransferstn2 = closetransferstn2;
+	}
+	public MetroVO(String stn, int stnnum, int stnline, int duration,boolean transfer
+			, int dijknum, int closetransferstn1, int closetransferstn2) {
+		super();
+		this.stn = stn;
+		this.stnnum = stnnum;
+		this.stnline = stnline;
+		this.duration = duration;
+		this.transfer = transfer;
+		this.dijknum = dijknum;
+		this.closetransferstn1 = closetransferstn1;
+		this.closetransferstn2 = closetransferstn2;
+	}
+	public MetroVO(String stn, int stnnum, int stnline, boolean toilet, boolean storage,
+			boolean otherside) {
+		super();
+		this.stn = stn;
+		this.stnnum = stnnum;
+		this.stnline = stnline;
+		this.toilet = toilet;
+		this.storage = storage;
+		this.otherside = otherside;
+	}
+
+	public String getStn() {
+		return stn;
+	}
+
+	public void setStn(String stn) {
+		this.stn = stn;
+	}
+
+	public int getStnnum() {
+		return stnnum;
+	}
+
+	public void setStnnum(int stnnum) {
+		this.stnnum = stnnum;
+	}
+
+	public int getStnline() {
+		return stnline;
+	}
+
+	public void setStnline(int stnline) {
+		this.stnline = stnline;
+	}
+
+	public int getDuration() {
+		return duration;
+	}
+
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+
+	public boolean isToilet() {
+		return toilet;
+	}
+
+	public void setToilet(boolean toilet) {
+		this.toilet = toilet;
+	}
+
+	public boolean isStorage() {
+		return storage;
+	}
+
+	public void setStorage(boolean storage) {
+		this.storage = storage;
+	}
+
+	public boolean isOtherside() {
+		return otherside;
+	}
+
+	public void setOtherside(boolean otherside) {
+		this.otherside = otherside;
+	}
+
+	public boolean isTransfer() {
+		return transfer;
+	}
+
+	public void setTransfer(boolean transfer) {
+		this.transfer = transfer;
+	}
+
+	public int getDijknum() {
+		return dijknum;
+	}
+
+	public void setDijknum(int dijknum) {
+		this.dijknum = dijknum;
+	}
+
+	public int getClosetransferstn1() {
+		return closetransferstn1;
+	}
+
+	public void setClosetransferstn1(int closetransferstn1) {
+		this.closetransferstn1 = closetransferstn1;
+	}
+
+	public int getClosetransferstn2() {
+		return closetransferstn2;
+	}
+
+	public void setClosetransferstn2(int closetransferstn2) {
+		this.closetransferstn2 = closetransferstn2;
+	}
+
+	@Override
+	public String toString() {
+		return "MetroVO [stn=" + stn + ", stnnum=" + stnnum + ", stnline=" + stnline + ", duration=" + duration
+				+ ", toilet=" + toilet + ", storage=" + storage + ", otherside=" + otherside + ", transfer=" + transfer
+				+ ", dijknum=" + dijknum + ", closetransferstn1=" + closetransferstn1 + ", closetransferstn2="
+				+ closetransferstn2 + "]";
+	}
+	
+	public String toString2() {
+		return stn+"¿ªÁ¤º¸:"+"stn="+stn+",toilet=" + toilet + ", storage=" + storage + ", otherside=" + otherside + ", transfer="+transfer+"";
+					
+	}
+
+}
