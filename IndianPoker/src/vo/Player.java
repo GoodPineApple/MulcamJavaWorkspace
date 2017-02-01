@@ -1,0 +1,34 @@
+package vo;
+
+public class Player {
+	private int bettingCoin;
+	private Card card;
+	
+	public Player(int bettingCoin, Card card) {
+		super();
+		this.bettingCoin = bettingCoin;
+		this.card = card;
+	}
+
+	public int getBettingCoin() {
+		return bettingCoin;
+	}
+
+	public void setBettingCoin(int bettingCoin) {
+		this.bettingCoin = bettingCoin;
+	}
+
+	public Card getCard() {
+		return card;
+	}
+
+	public void setCard(Card card) {
+		this.card = card;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [bettingCoin=" + bettingCoin + ", card=" + card + "]";
+	}
+	
+}

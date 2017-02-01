@@ -1,0 +1,9 @@
+package interfacePack;
+
+import java.util.Set;
+
+public interface Card {
+	int cardNum = 0;
+	String cardColor = "none";
+	Set<int,String> card;
+}
