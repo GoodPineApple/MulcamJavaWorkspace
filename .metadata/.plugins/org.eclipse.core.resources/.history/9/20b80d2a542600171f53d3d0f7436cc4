@@ -1,0 +1,36 @@
+package arrayTest;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class ArrayTest {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt(); // array°¹¼ö
+        int k = in.nextInt(); // ·ÎÅ×ÀÌ¼ÇÈ½¼ö
+        int a[] = new int[n];
+        for(int a_i=0; a_i < n; a_i++){
+            a[a_i] = in.nextInt();
+        }
+        
+        for(int i=0; i<k; i++){
+            int _a = a[n-1];
+            for(int j=0; j<k; j++){
+                a[j] = a[j+1];
+            }    
+            a[n-1] = _a;
+        }
+        
+        String result = "";
+        
+        for(int i=0; i<n; i++){
+            result += a[i] + " ";
+        }
+        
+        System.out.println(result);
+        System.out.println("????");
+    }
+}

@@ -1,0 +1,32 @@
+package pascal;
+
+public class Pascal {
+
+	public static void main(String[] args) {
+		System.out.println("1");
+		System.out.println(1 + " " + 1);
+		
+		int[] a = new int[8];
+		a[0] = 1;
+		a[1] = 1;
+		
+		for(int i=1; i<8; i++){
+			
+			a[i+1] = 1;
+			
+			if(a.length>4){
+				for(int x=1; x<i; x++){
+					a[i-x] = a[i-1-x] + a[i-x];
+				}				
+			}
+			
+			for(int j=0; j<a.length; j++){
+				if(a[j] != 0){
+					System.out.print(a[j] + " ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+}
